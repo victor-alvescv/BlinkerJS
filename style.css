@@ -61,7 +61,7 @@ body {
 .navbar {
   height: 326px;
   padding: 20px 15px;
-  background-color: grey;
+  background-color: rgba(41, 25, 71, 0.83);
   align-items: center;
   display: flex;
   position: relative;
@@ -103,6 +103,7 @@ img {
 
 .logo {
   transition: all 0.15s ease;
+  animation: showOn 1s forwards;
 }
 
 .navbar .logo {
@@ -114,6 +115,7 @@ img {
   display: flex;
   width: 100%;
   max-width: 430px;
+  animation: showOn 1s forwards;
 }
 
 .navbar .link {
@@ -187,7 +189,8 @@ input:focus {
   display: inline-block;
   font-size: 30px;
   vertical-align: -0.125em;
-  background-color: white;
+  background-color: transparent;
+  animation: showOn 2s forwards;
 }
 
 .search-wrapper svg {
@@ -264,6 +267,14 @@ input:focus {
   flex-wrap: wrap;
 }
 
+.content-wrapper h1 {
+  animation: showOn 2s forwards;
+}
+
+.content-wrapper input {
+  animation: showOn 2s forwards;
+}
+
 .search-info {
   color: #6030b1;
   padding: 50px 0;
@@ -328,6 +339,7 @@ select {
   max-width: 19rem;
   margin: 1px;
   color: white;
+  animation: showUp 1s forwards;
 }
 
 .movie:hover {
@@ -364,6 +376,7 @@ select {
 .loading-state {
   margin: 80px 0;
   width: 100%;
+  animation: showUp 1s forwards;
 }
 
 .fa-spinner {
@@ -373,10 +386,24 @@ select {
 .initial__img {
   width: 50%;
   margin: 0 auto;
+  animation: showUp 1s forwards;
+}
+
+.img__text {
+  animation: showUp 1s forwards;
+}
+
+h3 {
+  animation: showUp 1s forwards;
 }
 
 .error__img {
   width: 30%;
+  animation: showOn 1s forwards;
+}
+
+.error__text {
+  animation: showUp 1s forwards;
 }
 
 .img__wrapper {
@@ -438,5 +465,25 @@ select {
 
   .search-wrapper svg {
     font-size: 20px;
+  }
+}
+
+@keyframes showUp {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+@keyframes showOn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
