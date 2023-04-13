@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --md-theme-default-primary: #6030b1;
   --md-theme-default-accent: #ff328f;
@@ -215,6 +219,7 @@ input:focus {
   bottom: 0;
   right: 0;
   z-index: 1;
+  animation: blur 2s forwards
 }
 
 .overlay::after {
@@ -466,6 +471,50 @@ h3 {
   .search-wrapper svg {
     font-size: 20px;
   }
+
+  .img__text {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .error__text {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 12px;
+  }
+
+  .content-wrapper h1 {
+    font-size: 28px;
+  }
+
+  #filter {
+    flex-direction: column;
+    font-size: 20px;
+  }
+  
+  .navbar .logo {
+    width: 120px;
+    height: initial;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+  }
+
+  .mobile-ver {
+    flex-direction: column !important;
+  }
+
+  .movie {
+    margin-bottom: 30px;
+  }
+
+  .black-txt {
+    font-size: 24px;
+  }
 }
 
 @keyframes showUp {
@@ -485,5 +534,14 @@ h3 {
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes blur {
+  from {
+    filter: blur(8px) ;
+  }
+  to {
+    filter: blur(0px) ;
   }
 }
