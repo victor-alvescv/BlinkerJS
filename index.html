@@ -8,6 +8,7 @@
     <link rel="icon" href="assets/blinker_logo.png">
     <link rel="stylesheet" href="style.css" />
     <script src="app.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <div id="app">
@@ -18,33 +19,54 @@
             style="flex-direction: row; z-index: 1005"
           >
             <div class="logo">
+               <div  data-aos="fade-down"
+               data-aos-delay="300"
+               data-aos-duration="1000">
               <img
                 src="https://dev.d24jig8s1lr7n9.amplifyapp.com/img/whitelogo.39850b27.png"
                 class="logo"
                 alt="blinker logo"
               />
             </div>
+            </div>
             <div class="links flex align-center justify-between">
+              <div data-aos="fade-left" data-aos-delay="500"
+              data-aos-duration="800">
               <a class="link router-link-active" href="">Home</a>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="700"
+            data-aos-duration="800">
               <a
                 class="link router-link-exact-active router-link-active"
                 href=""
                 >Find your Movie</a
-              >
+              ></div>
+              <div data-aos="fade-left" data-aos-delay="900"
+              data-aos-duration="800">
               <a class="btn-contact" href="">Contact</a>
             </div>
+          </div>
+            
           </div>
           <div
             class="content-wrapper flex-col align-center"
             style="margin-top: 40px"
           >
+          <div data-aos="fade-on" data-aos-delay="700"
+              data-aos-duration="800">
             <h1>Browse our movies</h1>
+          </div>
             <div class="input-wrap">
+              <div data-aos="fade-on" data-aos-delay="900"
+          data-aos-duration="800">
               <input
                 type="text"
                 placeholder="Search by Name and find the best..."
                 onchange="onSearchChange(event)"
               />
+            </div>
+            <div data-aos="fade-on" data-aos-delay="1200"
+          data-aos-duration="800">
               <div class="search-wrapper flex justify-center align-center">
                 <svg
                   aria-hidden="true"
@@ -63,12 +85,16 @@
                   ></path>
                 </svg>
               </div>
+              </div>
             </div>
           </div>
           <div class="overlay"></div>
         </div>
         <div id="filter" class="content-wrapper justify-between">
+          <div data-aos="fade-in" data-aos-delay="900"
+              data-aos-duration="800">
           <h1 class="search-info"> <span class="black-txt">Search results</span> <span style="White-Space: nowrap; Overflow: hidden; Text-overflow: ellipsis; max-width: 500px; color: white; font-weight: 800; font-size: 20px; margin-left: 5px;"><span class="searchName" style="color: #f8f8f8; opacity: 0.5;"></span></h1>
+        </div>
           <div class="price-filter flex flex-col">
           </div>
         </div>
@@ -78,5 +104,9 @@
         </section>
       </div>
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

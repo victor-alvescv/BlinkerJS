@@ -9,6 +9,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 :root {
@@ -107,7 +108,6 @@ img {
 
 .logo {
   transition: all 0.15s ease;
-  animation: showOn 1s forwards;
 }
 
 .navbar .logo {
@@ -119,7 +119,6 @@ img {
   display: flex;
   width: 100%;
   max-width: 430px;
-  animation: showOn 1s forwards;
 }
 
 .navbar .link {
@@ -194,7 +193,6 @@ input:focus {
   font-size: 30px;
   vertical-align: -0.125em;
   background-color: transparent;
-  animation: showOn 2s forwards;
 }
 
 .search-wrapper svg {
@@ -219,7 +217,6 @@ input:focus {
   bottom: 0;
   right: 0;
   z-index: 1;
-  animation: blur 2s forwards
 }
 
 .overlay::after {
@@ -272,13 +269,6 @@ input:focus {
   flex-wrap: wrap;
 }
 
-.content-wrapper h1 {
-  animation: showOn 2s forwards;
-}
-
-.content-wrapper input {
-  animation: showOn 2s forwards;
-}
 
 .search-info {
   color: #6030b1;
@@ -404,7 +394,7 @@ h3 {
 
 .error__img {
   width: 30%;
-  animation: showOn 1s forwards;
+  animation: showOn 1s forwards
 }
 
 .error__text {
@@ -534,14 +524,5 @@ h3 {
   }
   to {
     opacity: 1;
-  }
-}
-
-@keyframes blur {
-  from {
-    filter: blur(8px) ;
-  }
-  to {
-    filter: blur(0px) ;
   }
 }
