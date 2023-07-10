@@ -226,7 +226,7 @@ input:focus {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(41, 25, 71, 0.83);
+  background-color: rgba(39, 19, 77, 0.83);
   pointer-events: none;
 }
 
@@ -381,7 +381,7 @@ select {
 .initial__img {
   width: 50%;
   margin: 0 auto;
-  animation: showUp 1s forwards;
+  animation: showOn 1s forwards;
 }
 
 .img__text {
